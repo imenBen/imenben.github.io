@@ -27,6 +27,8 @@ menu_settings:
           url: '/cv/'
         - title: 'Community'
           url: '/community/'
+        - title: 'Contact'
+          url: '/contact/'
     # Hidden for now. To show it, uncomment these two lines and set `published: true` in _pages/tools.md.
     # - title: 'Tools'
     #   url: '/tools/'
@@ -47,7 +49,7 @@ author:
   author_intro: Imen Benzarti
   author_name: Imen Benzarti
   author_role: Associate Professor, ÉTS Montréal
-  author_avatar: # Add your photo, for example '/images/imen.jpg'
+  author_avatar: /images/imen-benzarti-square.jpg
 
 
 #-------------------------------
@@ -110,9 +112,31 @@ faq_items:
 
 
 #-------------------------------
+# Gallery Settings (home page). Add photos to /images/ and list them below, then set enable: true.
+gallery:
+  enable: false
+  gallery_title: Life in the <em>Lab</em>
+  gallery_description: Moments from conferences, workshops and team life.
+  gallery_caption:
+
+gallery_images:
+  - alt: 'Imen Benzarti'
+    url: '/images/imen-benzarti.jpg'
+
+
+#-------------------------------
 # Newsletter Settings (disabled)
 mailchimp:
   enable: false
+
+
+#-------------------------------
+# Contact Form (Formspree, free for 50 messages per month)
+# 1. Create a free account at https://formspree.io and create a form.
+# 2. Copy the form ID (the part after /f/ in its endpoint, for example xyzabcd) below.
+contact:
+  formspree_id:
+  description: Questions about my research, collaborations or supervision? Send me a message and I will get back to you.
 
 
 #-------------------------------
