@@ -1,31 +1,34 @@
----
-layout: compress
----
+<!DOCTYPE html>
+<html lang="en">
 
-{% include base_path %}
+{% include head.html %}
 
-<!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
+<body {% if page.url == "/" %}class="home-page"{% endif %}>
 
-  <body>
+  {% if site.data.settings.google-analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+  <!-- begin global wrap -->
+  <div class="global-wrap">
 
-    {{ content }}
+    {% include header.html %}
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
+    <!-- begin content -->
+    <main class="content" aria-label="Content">
+      {{ content }}
+    </main>
+    <!-- end content -->
 
-    {% include scripts.html %}
+    {% include footer.html %}
 
-  </body>
+  </div>
+  <!-- end global wrap -->
+
+  <div class="overlay"></div>
+
+  <script src="{{ '/js/scripts.js' | relative_url }}"></script>
+  <script src="{{ '/js/common.js' | relative_url }}"></script>
+</body>
+
 </html>

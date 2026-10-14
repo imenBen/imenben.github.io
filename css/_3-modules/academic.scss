@@ -1,0 +1,80 @@
+/* News (home page) */
+.news {
+  display: grid;
+  row-gap: 12px;
+}
+
+.news__item {
+  display: flex;
+  column-gap: 16px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  background-color: var(--background-alt-color);
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+}
+
+.news__date {
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.news__text {
+  margin-bottom: 0;
+  font-size: 16px;
+  color: var(--text-alt-color);
+}
+
+/* Publications */
+.publications__group {
+  margin-bottom: 40px;
+}
+
+.publication {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.publication__title {
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+
+.publication__authors,
+.publication__venue {
+  margin-bottom: 4px;
+  font-size: 16px;
+  color: var(--text-alt-color);
+}
+
+.publication__venue {
+  font-style: italic;
+}
+
+.publication__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+
+  a {
+    padding: 2px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+}
+
+/* Research page cards */
+.project__description {
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: var(--text-alt-color);
+}

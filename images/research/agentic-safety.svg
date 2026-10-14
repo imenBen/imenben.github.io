@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#480999"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <g fill="none" stroke="#fff" stroke-opacity="0.12" stroke-width="2">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200 M0 600 H1200 M0 750 H1200"/>
+    <path d="M150 0 V900 M300 0 V900 M450 0 V900 M600 0 V900 M750 0 V900 M900 0 V900 M1050 0 V900"/>
+  </g>
+  <path d="M600 190 L800 270 V450 C800 580 715 670 600 720 C485 670 400 580 400 450 V270 Z"
+        fill="#fff" fill-opacity="0.08" stroke="#fff" stroke-opacity="0.85" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M525 455 L585 515 L690 400" fill="none" stroke="#e62699" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#fff" fill-opacity="0.7">
+    <rect x="160" y="140" width="22" height="22" rx="4"/>
+    <rect x="1010" y="290" width="22" height="22" rx="4"/>
+    <rect x="910" y="730" width="22" height="22" rx="4"/>
+    <rect x="260" y="640" width="22" height="22" rx="4"/>
+  </g>
+</svg>

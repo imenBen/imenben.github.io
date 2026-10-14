@@ -1,12 +1,16 @@
 ---
-layout: archive
-title: "Teaching"
+layout: page
+title: Teaching
 permalink: /teaching/
-author_profile: true
+description: Courses taught by Imen Benzarti at ÉTS Montréal.
 ---
+<p>I teach at the École de technologie supérieure (ÉTS) in Montréal, in the Department of Software Engineering and IT. My courses are being adapted to the era of large language models.</p>
 
-{% include base_path %}
-
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+{% assign courses = site.teaching | sort: 'order' %}
+{% for course in courses %}
+<div class="publication">
+  <h3 class="publication__title"><a href="{{ course.url | relative_url }}">{{ course.title }}</a></h3>
+  <p class="publication__venue">{{ course.level }}{% if course.term %}, {{ course.term }}{% endif %}</p>
+  <p>{{ course.content | markdownify | strip_html | truncatewords: 40 }}</p>
+</div>
 {% endfor %}

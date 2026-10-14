@@ -1,0 +1,14 @@
+<div class="publication">
+  <h3 class="publication__title">{{ pub.title }}</h3>
+  {% if pub.authors %}<p class="publication__authors">{{ pub.authors }}</p>{% endif %}
+  <p class="publication__venue">{% if pub.venue %}{{ pub.venue }}, {% endif %}{{ pub.year }}</p>
+  {% if include.details %}{{ pub.content | markdownify }}{% endif %}
+  {% if pub.pdf or pub.doi or pub.slides or pub.code %}
+  <div class="publication__links">
+    {% if pub.pdf %}<a href="{{ pub.pdf | relative_url }}">PDF</a>{% endif %}
+    {% if pub.doi %}<a href="{{ pub.doi }}">DOI</a>{% endif %}
+    {% if pub.slides %}<a href="{{ pub.slides | relative_url }}">Slides</a>{% endif %}
+    {% if pub.code %}<a href="{{ pub.code }}">Code</a>{% endif %}
+  </div>
+  {% endif %}
+</div>

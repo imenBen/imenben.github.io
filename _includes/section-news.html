@@ -1,0 +1,20 @@
+{% if site.data.settings.news.enable == true and site.data.settings.news_items.size > 0 %}
+<!-- begin section news -->
+<section class="section section-news">
+  <div class="section__info">
+    {% if site.data.settings.news.news_title %}
+      <h2 class="section__title">{{ site.data.settings.news.news_title }}</h2>
+    {% endif %}
+  </div>
+
+  <ul class="news list-reset">
+    {% for item in site.data.settings.news_items %}
+    <li class="news__item">
+      <span class="news__date">{{ item.date }}</span>
+      <p class="news__text">{{ item.text }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+<!-- end section news -->
+{% endif %}

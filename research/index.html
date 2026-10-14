@@ -1,0 +1,60 @@
+---
+layout: default
+title: Research <em>Projects</em>
+description: Our work treats human values and safety concerns as first-class, verifiable requirements. The projects below share that goal and often feed each other.
+---
+
+<!-- begin page section head -->
+<div class="container">
+  <div class="page-section-head">
+    {% if page.title %}
+      <h1 class="page-section-title">{{ page.title }}</h1>
+    {% endif %}
+    {% if page.description %}
+      <p class="page-section-description">{{ page.description }}</p>
+    {% endif %}
+  </div>
+</div>
+<!-- end page section head -->
+
+<div class="projects-page container">
+  <div class="row">
+
+    {% assign sorted = site.projects | sort: 'order' %}
+    {% for project in sorted %}
+    <article class="project col col-4 col-d-6 col-t-12">
+      <div class="project__content">
+
+        <div class="project__head">
+          {% if project.image %}
+          <a href="{{ project.url | relative_url }}" class="project__image">
+            <img class="lazy" data-src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+          </a>
+          {% endif %}
+        </div>
+
+        <div class="project__info">
+          <h2 class="project__title">
+            <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+          </h2>
+          <div class="project__meta">
+            {% if project.subtitle %}
+              <div class="project__subtitle">{{ project.subtitle }}</div>
+            {% endif %}
+          </div>
+          {% if project.description %}
+            <p class="project__description">{{ project.description }}</p>
+          {% endif %}
+        </div>
+
+      </div>
+    </article>
+    {% endfor %}
+
+  </div>
+
+  <div class="page__content">
+    <h2>Funding</h2>
+    <p>We gratefully acknowledge support from NSERC (Discovery and Alliance programs) and ÉTS.</p>
+  </div>
+</div>

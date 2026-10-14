@@ -1,0 +1,125 @@
+#-------------------------------
+# Site Settings
+title: Imen Benzarti
+logo: # Leave empty to show the site title as text. For example '/images/logo.png'.
+logo_dark:
+description: Associate Professor of Software Engineering at ÉTS Montréal. Human-centered requirements engineering, software safety for agentic AI, and quantum software engineering.
+color_scheme: auto # auto, light or dark. Auto lets visitors switch with the toggle.
+
+
+#-------------------------------
+# Navigation Settings
+menu_settings:
+  menu_items:
+    - title: 'Research'
+      url: '/research/'
+    - title: 'Publications'
+      url: '/publications/'
+    - title: 'Teaching'
+      url: '/teaching/'
+    - title: 'Team'
+      url: '/team/'
+    - title: 'Blog'
+      url: '/blog/'
+    - title: 'More'
+      submenu:
+        - title: 'CV'
+          url: '/cv/'
+        - title: 'Community'
+          url: '/community/'
+    # Hidden for now. To show it, uncomment these two lines and set `published: true` in _pages/tools.md.
+    # - title: 'Tools'
+    #   url: '/tools/'
+    - title: 'FR'
+      url: '/fr/'
+
+
+# Call to action button
+cta_button:
+  enable: true
+  cta_button_link: "/join/"
+  cta_button_text: Join us
+
+
+#-------------------------------
+# Author Settings
+author:
+  author_intro: Imen Benzarti
+  author_name: Imen Benzarti
+  author_role: Associate Professor, ÉTS Montréal
+  author_avatar: # Add your photo, for example '/images/imen.jpg'
+
+
+#-------------------------------
+# Sidebar Section Settings
+sidebar:
+  sidebar_title: Engineering software that <em>respects</em> people. # You can add an 'em' element to highlight text.
+  sidebar_description: I am an Associate Professor in the Department of Software Engineering and IT at the École de technologie supérieure (ÉTS) in Montréal, and a member of the SOFEESS and LATECE labs. I work in requirements engineering, treating human values and safety as first-class, verifiable requirements, from AI agents to quantum systems.
+
+
+# Social Links (icons from https://fontawesome.com/icons)
+social:
+- {icon: "fa-brands fa-github", name: "GitHub", link: "https://github.com/imenBen"}
+- {icon: "fa-solid fa-building-columns", name: "ÉTS", link: "https://www.etsmtl.ca/"}
+# TODO: add your links, then uncomment
+# - {icon: "fa-solid fa-envelope", name: "Email", link: "mailto:you@etsmtl.ca"}
+# - {icon: "fa-brands fa-google-scholar", name: "Google Scholar", link: "https://scholar.google.com/citations?user=..."}
+# - {icon: "fa-brands fa-orcid", name: "ORCID", link: "https://orcid.org/..."}
+# - {icon: "fa-brands fa-linkedin", name: "LinkedIn", link: "https://www.linkedin.com/in/..."}
+
+
+#-------------------------------
+# Research Projects Section (home page shows projects with `featured: true`)
+projects:
+  enable: true
+  projects_title: Research <em>Projects</em> # You can add an 'em' element to highlight text.
+  projects_description: Human values and safety concerns should be treated as first-class, verifiable requirements. These projects put that conviction to work.
+
+
+#-------------------------------
+# News Section (home page). Add new items at the top.
+news:
+  enable: true
+  news_title: Latest <em>News</em>
+
+news_items:
+  - date: 2026
+    text: Our paper <em>From Business Problems to AI Solutions</em> was accepted at the IEEE International Requirements Engineering Conference (RE'26), held at ÉTS in Montréal.
+  - date: 2026
+    text: Co-organizing the HCARE 2026 workshop on human-centered AI and requirements engineering.
+  - date: 2026
+    text: Paper on migrating QAOA implementations from Qiskit 1.x to 2.x presented at the Q-SE workshop at ICSE 2026, Rio de Janeiro.
+  - date: 2026
+    text: New NSERC Alliance International Catalyst grant in quantum software engineering, with Shaukat Ali (Simula / OsloMet).
+
+
+#-------------------------------
+# Blog Section Settings (shown on the home page once there is at least one post)
+blog:
+  enable: true
+  blog_title: From the <em>Blog</em> # You can add an 'em' element to highlight text.
+  blog_description: Notes on requirements engineering, AI safety and research life.
+
+
+#-------------------------------
+# Faq Settings (disabled)
+faq:
+  enable: false
+
+faq_items:
+
+
+#-------------------------------
+# Newsletter Settings (disabled)
+mailchimp:
+  enable: false
+
+
+#-------------------------------
+# Comment Section (Disqus). Add your shortname to enable comments on blog posts.
+disqus-identifier:
+
+
+#-------------------------------
+# Google Analytics
+google-analytics: # Add your GA Tracking Id

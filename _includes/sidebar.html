@@ -1,25 +1,48 @@
-{% include base_path %}
+<!-- begin sidebar -->
+<section class="sidebar">
+  <div class="sidebar__inner">
 
-{% if page.author_profile or layout.author_profile or page.sidebar %}
-  <div class="sidebar sticky">
-  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
-  {% if page.sidebar %}
-    {% for s in page.sidebar %}
-      {% if s.image %}
-        <img src=
-        {% if s.image contains "://" %}
-          "{{ s.image }}"
-        {% else %}
-          "{{ s.image | prepend: "/images/" | prepend: base_path }}"
-        {% endif %}
-        alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
+    <div class="sidebar__meta">
+      {% if site.data.settings.author.author_avatar %}
+      <div class="sidebar__avatar">
+        <img class="lazy" data-src="{{ site.data.settings.author.author_avatar | relative_url }}" alt="{{ site.data.settings.author.author_name }}">
+      </div>
       {% endif %}
-      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
-      {% if s.text %}{{ s.text | markdownify }}{% endif %}
-    {% endfor %}
-    {% if page.sidebar.nav %}
-      {% include nav_list nav=page.sidebar.nav %}
-    {% endif %}
-  {% endif %}
+      <div class="sidebar__info">
+        {% if site.data.settings.author.author_intro %}
+          <div class="sidebar__intro">{{ site.data.settings.author.author_intro }}</div>
+        {% endif %}
+        {% if site.data.settings.author.author_role %}
+          <span class="sidebar__role">{{ site.data.settings.author.author_role }}</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="sidebar__content">
+      {% if site.data.settings.sidebar.sidebar_title %}
+        <h1 class="sidebar__title">{{ site.data.settings.sidebar.sidebar_title }}</h1>
+      {% endif %}
+      {% if site.data.settings.sidebar.sidebar_description %}
+        <p class="sidebar__description">{{ site.data.settings.sidebar.sidebar_description }}</p>
+      {% endif %}
+    </div>
+
+    <div class="sidebar__social">
+      {% if site.data.settings.social %}
+      <ul class="sidebar__social__list list-reset">
+        {% for social in site.data.settings.social %}
+        <li class="sidebar__social__item">
+          <a class="sidebar__social__link" href="{{ social.link }}" target="_blank" rel="noopener"
+            aria-label="{{ social.icon }} link"><i class="{{ social.icon }}"></i></a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+
+    <div class="sidebar__copyright">{{site.time | date: '%Y'}} &copy; <a href="/">{{site.data.settings.title}}</a>. Crafted & Designed by <a href="https://jekyllthemes.io/developers/artem-sheludko">Artem Sheludko</a>.
+    </div>
+
   </div>
-{% endif %}
+</section>
+<!-- end sidebar -->
